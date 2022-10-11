@@ -1,0 +1,88 @@
+<div class="team">
+  <div class="team__ceo">
+    <div class="team__video">
+      <!-- <iframe
+        width="400"
+        height="220"
+        src="https://www.youtube.com/embed/vjI-EaODACY"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe> -->
+      <img
+        src="/images/placeholder-video.png"
+        alt="video"
+        width="400"
+        height="220"
+      />
+    </div>
+    <div class="team__text">
+      <h2>Palavra do CEO</h2>
+      <h3>Carlos Curioni</h3>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book
+      </p>
+    </div>
+  </div>
+  <div class="team__members">
+    <h3>Conheça nosso time fora de série</h3>
+    <div class="team__list">
+      <img src="/images/camila.png" alt="Camila" width="208" height="200" />
+      <img src="/images/guto.png" alt="Guto" width="208" height="200" />
+      <img src="/images/david.png" alt="David" width="208" height="200" />
+      <img src="/images/beatriz.png" alt="Beatriz" width="208" height="200" />
+    </div>
+  </div>
+</div>
+
+<style>
+  .team {
+    padding: 16px;
+    background-color: #F8F8F8;
+  }
+
+  .team__ceo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .team__video {
+    margin-bottom: 1rem;
+  }
+
+  .team__video img {
+    width: 100%;
+    height: auto;
+  }
+
+  .team__text h2, .team__members h3 {
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .team__text h3 {
+    font-weight: normal;
+    font-style: italic;
+    color:#F9A92F;
+    margin: 0;
+  }
+
+  .team__members h3 {
+    margin-bottom: 16px;
+  }
+
+  .team__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .team__list img {
+    width: 100%;
+    height: auto;
+  }
+</style>
