@@ -1,0 +1,60 @@
+---
+const response = await fetch("http://www.mocky.io/v2/5d6fb6b1310000f89166087b");
+const data = await response.json();
+---
+
+<div class="vacancies">
+  <h2>Vagas em aberto</h2>
+  <h3>Desenvolvimento</h3>
+  <ul class="vacancies__list">
+    {
+      data.vagas
+        .filter((vaga) => vaga.ativa)
+        .map((vaga) => (
+          <li class="vacancy">
+            <a class="vacancy__role" href={vaga.link}>
+              {vaga.cargo}
+            </a>
+            {vaga.localizacao ? (
+              <span class="vacancy__location">{`${vaga.localizacao.bairro} - ${vaga.localizacao.cidade}, ${vaga.localizacao.pais}`}</span>
+            ) : (
+              <span class="vacancy__location">Remoto</span>
+            )}
+          </li>
+        ))
+    }
+  </ul>
+</div>
+
+<style>
+  .vacancies {
+    padding: 1rem;
+  }
+
+  .vacancies h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  .vacancies h3 {
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+
+  .vacancies__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .vacancy {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .vacancy__role {
+    font-weight: bold;
+    color: #359c9c;
+    text-decoration: none;
+  }
+</style>
