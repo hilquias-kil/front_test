@@ -41,12 +41,19 @@
 
 <style>
   .highlights {
-    padding: 1rem;
+    padding:2rem 1rem;
   }
 
   .highlights__list{
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 768px) {
+    .highlights__list{
+      gap: 40px;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 
   .highlights__item {
