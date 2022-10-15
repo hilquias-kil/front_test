@@ -4,17 +4,23 @@ export const Video = () => {
   const [showVideo, setShowVideo] = useState(false);
 
   return !showVideo ? (
-    <img
-      src="/images/placeholder-video.webp"
-      alt="video"
-      width="400"
-      height="220"
+    <button
+      type="button"
+      aria-label="video palyer"
       onClick={() => setShowVideo(true)}
-      style={{
-        width: "100%",
-        height: "auto",
-      }}
-    />
+      style={{ padding: 0, border: 0, backgroundColor: "transparent" }}
+    >
+      <img
+        src="/images/placeholder-video.webp"
+        alt="video"
+        width="400"
+        height="220"
+        style={{
+          width: "100%",
+          height: "auto",
+        }}
+      />
+    </button>
   ) : (
     <iframe
       width="400"

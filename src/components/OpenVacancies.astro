@@ -1,9 +1,26 @@
 ---
+interface resp {
+  vagas: Vaga[];
+}
+
+interface Vaga {
+  cargo: string;
+  ativa: boolean;
+  link: string;
+  localizacao?: Localizacao;
+}
+
+interface Localizacao {
+  bairro: string;
+  cidade: string;
+  pais: string;
+}
+
 const response = await fetch("http://www.mocky.io/v2/5d6fb6b1310000f89166087b");
-const data = await response.json();
+const data: resp = await response.json();
 ---
 
-<div class="vacancies">
+<section class="vacancies">
   <h2>Vagas em aberto</h2>
   <h3>Desenvolvimento</h3>
   <ul class="vacancies__list">
@@ -24,7 +41,7 @@ const data = await response.json();
         ))
     }
   </ul>
-</div>
+</section>
 
 <style>
   .vacancies {
@@ -70,7 +87,7 @@ const data = await response.json();
 
   .vacancy__role {
     font-weight: bold;
-    color: #359c9c;
+    color: var(--green);
     text-decoration: none;
     margin-bottom: 8px;
   }

@@ -22,13 +22,22 @@ const { title } = Astro.props;
   <body>
     <slot />
     <style is:global>
+      :root {
+        --black: #000000;
+        --white: #ffffff;
+        --gray: #7d7873;
+        --border: #cbcbcb;
+        --green: #359c9c;
+        --bg: #f8f8f8;
+        --primary: #f9a92f;
+      }
       html {
         font-family: system-ui, sans-serif;
       }
       body {
         margin: 0;
         padding: 0;
-        color: #7d7873;
+        color: var(--gray);
       }
     </style>
   </body>

@@ -2,7 +2,7 @@
 import chevronsRight from "../assets/chevrons-right.svg";
 ---
 
-<div class="vagas_cta">
+<section class="vagas_cta">
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lectus
     eget turpis hendrerit efficitur in at enim. Maecenas sed pulvinar massa.
@@ -12,10 +12,10 @@ import chevronsRight from "../assets/chevrons-right.svg";
   <div class="link">
     <a href="#" title="Vagas em aberto">
       <span>Vagas em aberto</span>
-      <img src={chevronsRight} width="20" height="20" />
+      <img src={chevronsRight} width="20" height="20" alt="chevrons right" />
     </a>
   </div>
-</div>
+</section>
 
 <style>
   .vagas_cta {
@@ -36,14 +36,14 @@ import chevronsRight from "../assets/chevrons-right.svg";
   }
 
   .vagas_cta .link {
-    border-top: 2px solid #cbcbcb;
+    border-top: 2px solid var(--border);
     padding-top: 20px;
     width: fit-content;
     margin: 0 auto;
   }
 
   .vagas_cta .link a {
-    color: #359c9c;
+    color: var(--green);
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;

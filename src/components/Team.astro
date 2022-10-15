@@ -2,7 +2,7 @@
 import { Video } from "./Video";
 ---
 
-<div class="team">
+<section class="team">
   <div class="team__ceo">
     <div class="team__video">
       <Video client:load/>
@@ -27,12 +27,12 @@ import { Video } from "./Video";
       <img src="/images/beatriz.webp" alt="Beatriz" width="208" height="200" />
     </div>
   </div>
-</div>
+</section>
 
 <style>
   .team {
     padding: 32px 16px;
-    background-color: #f8f8f8;
+    background-color: var(--bg);
   }
 
   @media (min-width: 768px) {
@@ -81,7 +81,7 @@ import { Video } from "./Video";
   .team__text h3 {
     font-weight: normal;
     font-style: italic;
-    color: #f9a92f;
+    color: var(--primary);
     margin: 0 0 24px;
   }
 

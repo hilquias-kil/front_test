@@ -2,7 +2,7 @@
 import chevronsRight from "../assets/chevrons-right.svg";
 ---
 
-<div class="highlights">
+<section class="highlights">
   <div class="highlights__list">
     <div class="highlights__item">
       <img
@@ -53,7 +53,7 @@ import chevronsRight from "../assets/chevrons-right.svg";
   <div class="highlights__link">
     <a href="#" title="Saiba mais">
       <span>Saiba mais</span>
-      <img src={chevronsRight} width="20" height="20" />
+      <img src={chevronsRight} width="20" height="20" alt="chevrons right" />
     </a>
   </div>
   <div class="highlights__image">
@@ -64,7 +64,7 @@ import chevronsRight from "../assets/chevrons-right.svg";
       height="300"
     />
   </div>
-</div>
+</section>
 
 <style>
   .highlights {
@@ -110,14 +110,14 @@ import chevronsRight from "../assets/chevrons-right.svg";
   }
 
   .highlights__link {
-    border-top: 2px solid #cbcbcb;
+    border-top: 2px solid var(--border);
     padding: 20px 20px 0;
     width: fit-content;
     margin: 0 auto 40px;
   }
 
   .highlights__link a {
-    color: #359c9c;
+    color: var(--green);
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
