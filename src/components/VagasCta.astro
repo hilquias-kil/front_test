@@ -1,3 +1,7 @@
+---
+import chevronsRight from "../assets/chevrons-right.svg";
+---
+
 <div class="vagas_cta">
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lectus
@@ -6,7 +10,10 @@
     consequat.
   </p>
   <div class="link">
-    <a href="#">Vagas em aberto</a>
+    <a href="#" title="Vagas em aberto">
+      <span>Vagas em aberto</span>
+      <img src={chevronsRight} width="20" height="20" />
+    </a>
   </div>
 </div>
 
@@ -29,16 +36,18 @@
   }
 
   .vagas_cta .link {
-    border-top: 2px solid #CBCBCB;
+    border-top: 2px solid #cbcbcb;
     padding-top: 20px;
     width: fit-content;
     margin: 0 auto;
   }
 
   .vagas_cta .link a {
-    color: #359C9C;
+    color: #359c9c;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
+    display: flex;
+    align-items: center;
   }
 </style>

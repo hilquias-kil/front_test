@@ -1,3 +1,7 @@
+---
+import chevronsRight from "../assets/chevrons-right.svg";
+---
+
 <div class="highlights">
   <div class="highlights__list">
     <div class="highlights__item">
@@ -47,7 +51,10 @@
     </div>
   </div>
   <div class="highlights__link">
-    <a href="#">Saiba mais</a>
+    <a href="#" title="Saiba mais">
+      <span>Saiba mais</span>
+      <img src={chevronsRight} width="20" height="20" />
+    </a>
   </div>
   <div class="highlights__image">
     <img
@@ -114,6 +121,8 @@
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
+    display: flex;
+    align-items: center;
   }
 
   .highlights__image img {
