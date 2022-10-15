@@ -1,20 +1,11 @@
+---
+import { Video } from "./Video";
+---
+
 <div class="team">
   <div class="team__ceo">
     <div class="team__video">
-      <!-- <iframe
-        width="400"
-        height="220"
-        src="https://www.youtube.com/embed/vjI-EaODACY"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe> -->
-      <img
-        src="/images/placeholder-video.png"
-        alt="video"
-        width="400"
-        height="220"
-      />
+      <Video client:load/>
     </div>
     <div class="team__text">
       <h2>Palavra do CEO</h2>
@@ -30,18 +21,30 @@
   <div class="team__members">
     <h3>Conheça nosso time fora de série</h3>
     <div class="team__list">
-      <img src="/images/camila.png" alt="Camila" width="208" height="200" />
-      <img src="/images/guto.png" alt="Guto" width="208" height="200" />
-      <img src="/images/david.png" alt="David" width="208" height="200" />
-      <img src="/images/beatriz.png" alt="Beatriz" width="208" height="200" />
+      <img src="/images/camila.webp" alt="Camila" width="208" height="200" />
+      <img src="/images/guto.webp" alt="Guto" width="208" height="200" />
+      <img src="/images/david.webp" alt="David" width="208" height="200" />
+      <img src="/images/beatriz.webp" alt="Beatriz" width="208" height="200" />
     </div>
   </div>
 </div>
 
 <style>
   .team {
-    padding: 16px;
+    padding: 32px 16px;
     background-color: #f8f8f8;
+  }
+
+  @media (min-width: 768px) {
+    .team {
+      padding: 32px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .team {
+      padding: 48px;
+    }
   }
 
   .team__ceo {
@@ -58,7 +61,7 @@
   }
 
   .team__video {
-    margin-bottom: 1rem;
+    margin-bottom: 40px;
   }
 
   @media (min-width: 768px) {
@@ -68,15 +71,10 @@
     }
   }
 
-  .team__video img {
-    width: 100%;
-    height: auto;
-  }
-
   .team__text h2,
   .team__members h3 {
     text-transform: uppercase;
-    margin: 0;
+    margin: 0 0 8px;
     font-size: 20px;
   }
 
@@ -84,11 +82,17 @@
     font-weight: normal;
     font-style: italic;
     color: #f9a92f;
-    margin: 0;
+    margin: 0 0 24px;
+  }
+
+  .team__text p {
+    line-height: 160%;
   }
 
   .team__members h3 {
-    margin-bottom: 16px;
+    text-align: center;
+    max-width: 240px;
+    margin: 0 auto 40px;
   }
 
   .team__list {

@@ -1,5 +1,5 @@
 <header class="header">
-  <img src="/images/foto-header.png" alt="Trabalhe no Elo7" />
+  <img src="/images/foto-header.webp" width="960" height="550" alt="Trabalhe no Elo7" />
   <h1>Trabalhe no Elo7</h1>
 </header>
 
@@ -10,6 +10,7 @@
 
   .header img {
     width: 100%;
+    height: auto;
   }
 
   .header h1 {
@@ -28,6 +29,13 @@
     .header h1 {
       font-size: 36px;
       bottom: 100px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .header h1 {
+      font-size: 48px;
+      bottom: 140px;
     }
   }
 </style>

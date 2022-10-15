@@ -1,7 +1,12 @@
 <div class="highlights">
   <div class="highlights__list">
     <div class="highlights__item">
-      <img src="/images/qualidade.png" alt="qualidade" />
+      <img
+        src="/images/qualidade.webp"
+        alt="qualidade"
+        width="150"
+        height="150"
+      />
       <h3>Qualidade de vida</h3>
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -11,7 +16,12 @@
       </p>
     </div>
     <div class="highlights__item">
-      <img src="/images/descontracao.png" alt="descontração" />
+      <img
+        src="/images/descontracao.webp"
+        alt="descontração"
+        width="150"
+        height="150"
+      />
       <h3>Ambiente descontraído</h3>
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -21,7 +31,12 @@
       </p>
     </div>
     <div class="highlights__item">
-      <img src="/images/atividades.png" alt="atividades" />
+      <img
+        src="/images/atividades.webp"
+        alt="atividades"
+        width="150"
+        height="150"
+      />
       <h3>Atividades extras</h3>
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -35,22 +50,33 @@
     <a href="#">Saiba mais</a>
   </div>
   <div class="highlights__image">
-    <img src="/images/foto-bottom.png" alt="Atividade elo7" width="860" height="300">
+    <img
+      src="/images/foto-bottom.webp"
+      alt="Atividade elo7"
+      width="860"
+      height="300"
+    />
   </div>
 </div>
 
 <style>
   .highlights {
-    padding:2rem 1rem;
+    padding: 2rem 1rem;
   }
 
-  .highlights__list{
+  @media (min-width: 1024px) {
+    .highlights {
+      padding: 2rem 0;
+    }
+  }
+
+  .highlights__list {
     display: grid;
     grid-template-columns: 1fr;
   }
 
   @media (min-width: 768px) {
-    .highlights__list{
+    .highlights__list {
       gap: 40px;
       grid-template-columns: 1fr 1fr 1fr;
     }
@@ -61,23 +87,30 @@
     margin-bottom: 40px;
   }
 
+  .highlights__item img {
+    margin-bottom: 40px;
+  }
+
   .highlights__item h3 {
     text-transform: uppercase;
+    margin: 0 0 36px;
   }
 
   .highlights__item p {
     text-align: justify;
+    line-height: 160%;
+    margin: 0;
   }
 
   .highlights__link {
-    border-top: 2px solid #CBCBCB;
+    border-top: 2px solid #cbcbcb;
     padding: 20px 20px 0;
     width: fit-content;
     margin: 0 auto 40px;
   }
 
   .highlights__link a {
-    color: #359C9C;
+    color: #359c9c;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
